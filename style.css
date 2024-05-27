@@ -1,5 +1,5 @@
 body {
-    font-family: 'Reddit Mono', sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #e0e0e0;
     color: #333;
     margin: 0;
@@ -38,7 +38,7 @@ nav a {
     background: #e0e0e0;
     box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
     transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
-    font-family: 'Calistoga' /* Tipografía similar a Leica */
+    font-family: 'Jacquard 12' /* Tipografía similar a Leica */
 }
 
 nav a:hover {
