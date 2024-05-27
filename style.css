@@ -12,10 +12,16 @@ body {
 
 header {
     background-color: #e0e0e0;
-    padding: 1rem 0;
+    padding: 2rem 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 100%;
     text-align: center;
+}
+
+.language-switch {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
 }
 
 nav ul {
@@ -23,22 +29,23 @@ nav ul {
     display: flex;
     justify-content: center;
     padding: 0;
-    margin: 0;
+    margin: 2rem 0 0 0;
 }
 
 nav li {
-    margin: 0 1rem;
+    margin: 0 2rem;
 }
 
 nav a {
     text-decoration: none;
     color: #333;
-    padding: 0.5rem 1.5rem;
+    padding: 1rem 2rem;
     border-radius: 25px;
     background: #e0e0e0;
     box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
     transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
-    font-family: 'Jacquard 12'; /* Tipografía Jacquard 12 */
+    font-family: 'Jersey 25', sans-serif; /* Tipografía Jersey 25 */
+    font-size: 1.5rem; /* Tamaño más grande */
 }
 
 nav a:hover {
@@ -68,12 +75,4 @@ h1, h2 {
 
 p {
     text-align: center;
-}
-
-.project {
-    margin-bottom: 1rem;
-}
-
-.project h3 {
-    color: #000000; /* Cambiado a color negro */
 }
