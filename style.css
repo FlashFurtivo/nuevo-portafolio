@@ -73,17 +73,67 @@ main {
 }
 
 section {
-    margin-bottom: 2rem;
-    padding: 2rem;
-    border-radius: 15px;
-    background: #e0e0e0;
-    box-shadow: 7px 7px 14px #bebebe, -7px -7px 14px #ffffff;
-}
+   Para centrar el contenido de la página, aplicar la tipografía Jersey 25 a los botones de idioma y asegurarte de que el cambio de idioma funcione correctamente, sigue estos pasos:
 
-h1, h2 {
-    color: #000000;
-}
+### Estructura del Proyecto
 
-p {
-    text-align: center;
-}
+1. **index.html**: Página principal con navegación y cambio de idioma.
+2. **about.html**: Página "Sobre mí".
+3. **projects.html**: Página de proyectos.
+4. **contact.html**: Página de contacto.
+5. **style.css**: Archivo CSS compartido para estilos.
+
+### index.html
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrique Franco - Portafolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap">
+    <script>
+        function changeLanguage(lang) {
+            const url = new URL(window.location);
+            url.searchParams.set('lang', lang);
+            window.location = url;
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const params = new URLSearchParams(window.location.search);
+            const lang = params.get('lang') || 'es';
+            document.documentElement.lang = lang;
+            if (lang === 'en') {
+                document.querySelector('h1').textContent = 'Enrique Franco';
+                document.querySelector('p').textContent = 'Designer and Cultural Heritage Manager';
+                document.querySelector('a[href="about.html"]').textContent = 'About Me';
+                document.querySelector('a[href="projects.html"]').textContent = 'Projects';
+                document.querySelector('a[href="contact.html"]').textContent = 'Contact';
+                document.querySelector('a[href="ruta/a/tu-cv.pdf"]').textContent = 'My CV';
+            }
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="language-switch">
+            <button onclick="changeLanguage('es')" class="lang-btn">ES</button> |
+            <button onclick="changeLanguage('en')" class="lang-btn">EN</button>
+        </div>
+        <h1>Enrique Franco</h1>
+        <p>Diseñador y Gestor del Patrimonio Cultural</p>
+    </header>
+    <main>
+        <nav>
+            <ul>
+                <li><a href="about.html">Sobre mí</a></li>
+                <li><a href="projects.html">Proyectos</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="ruta/a/tu-cv.pdf" target="_blank">Mi CV</a></li>
+            </ul>
+        </nav>
+    </main>
+</body>
+</html>
