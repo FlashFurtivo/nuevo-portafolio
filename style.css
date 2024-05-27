@@ -38,6 +38,7 @@ nav a {
     background: #e0e0e0;
     box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
     transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+    font-family: 'Lobster', cursive; /* Tipografía similar a Leica */
 }
 
 nav a:hover {
@@ -62,9 +63,17 @@ section {
 }
 
 h1, h2 {
-    color: #0056b3;
+    color: #000000; /* Cambiado a color negro */
 }
 
 p {
     text-align: center;
+}
+
+.project {
+    margin-bottom: 1rem;
+}
+
+.project h3 {
+    color: #000000; /* Cambiado a color negro */
 }
