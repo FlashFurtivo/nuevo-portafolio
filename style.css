@@ -8,6 +8,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 header {
@@ -22,6 +24,15 @@ header {
     position: absolute;
     top: 1rem;
     right: 1rem;
+}
+
+.lang-btn {
+    font-family: 'Jersey 25', sans-serif;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
 }
 
 nav ul {
@@ -44,14 +55,14 @@ nav a {
     background: #e0e0e0;
     box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
     transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
-    font-family: 'Jersey 25', sans-serif; /* Tipografía Jersey 25 */
-    font-size: 1.5rem; /* Tamaño más grande */
+    font-family: 'Jersey 25', sans-serif;
+    font-size: 1.5rem;
 }
 
 nav a:hover {
-    background-color: #ff0000; /* Color rojo sólido */
-    box-shadow: none; /* Elimina el difuminado */
-    color: #ffffff; /* Color del texto blanco al hacer hover */
+    background-color: #ff0000;
+    box-shadow: none;
+    color: #ffffff;
 }
 
 main {
@@ -70,7 +81,7 @@ section {
 }
 
 h1, h2 {
-    color: #000000; /* Cambiado a color negro */
+    color: #000000;
 }
 
 p {
