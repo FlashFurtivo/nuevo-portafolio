@@ -17,6 +17,14 @@
             const params = new URLSearchParams(window.location.search);
             const lang = params.get('lang') || 'es';
             document.documentElement.lang = lang;
+            if (lang === 'en') {
+                document.querySelector('h1').textContent = 'Enrique Franco';
+                document.querySelector('p').textContent = 'Designer and Cultural Heritage Manager';
+                document.querySelector('a[href="about.html"]').textContent = 'About Me';
+                document.querySelector('a[href="projects.html"]').textContent = 'Projects';
+                document.querySelector('a[href="contact.html"]').textContent = 'Contact';
+                document.querySelector('a[href="ruta/a/tu-cv.pdf"]').textContent = 'My CV';
+            }
         });
     </script>
 </head>
