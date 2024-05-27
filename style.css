@@ -8,7 +8,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    cursor: none; /* Ocultar el cursor por defecto */
 }
 
 header {
@@ -39,7 +38,7 @@ nav a {
     background: #e0e0e0;
     box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
     transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
-    font-family: 'Jacques Francois Shadow', cursive; /* Tipografía similar a Leica */
+    font-family: 'Jacquard 12'; /* Tipografía Jacquard 12 */
 }
 
 nav a:hover {
@@ -77,57 +76,4 @@ p {
 
 .project h3 {
     color: #000000; /* Cambiado a color negro */
-}
-
-/* Estilo para el cursor personalizado */
-body::after {
-    content: '';
-    width: 20px;
-    height: 20px;
-    background-color: #ff0000; /* Color rojo para el cursor */
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    z-index: 10000;
-}
-
-body {
-    position: relative;
-}
-
-body {
-    cursor: none; /* Ocultar el cursor predeterminado */
-}
-
-body::after {
-    content: '';
-    width: 20px;
-    height: 20px;
-    background-color: #ff0000; /* Color rojo */
-    border-radius: 50%;
-    position: fixed;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    z-index: 10000;
-}
-
-body {
-    cursor: none;
-}
-
-body::after {
-    content: '';
-    width: 15px;
-    height: 15px;
-    background-color: #ff0000; /* Color rojo */
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    z-index: 10000;
-}
-
-body {
-    position: relative;
 }
