@@ -46,6 +46,56 @@
     </div>
     <main>
         <section>
-            <```html
+Aquí tienes los archivos completos actualizados para `index.html`, `about.html`, `projects.html`, y `contact.html`, junto con el CSS necesario para que los botones en las páginas secundarias sean más pequeños y mantengan la opción de cambiar el idioma.
+
+### `index.html`
+```html
 <!DOCTYPE html>
-<html lang="
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrique Franco - Portafolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap">
+    <script>
+        function changeLanguage(lang) {
+            const url = new URL(window.location);
+            url.searchParams.set('lang', lang);
+            window.location = url;
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const params = new URLSearchParams(window.location.search);
+            const lang = params.get('lang') || 'es';
+            document.documentElement.lang = lang;
+            if (lang === 'en') {
+                document.querySelector('#about-link').textContent = 'ABOUT';
+                document.querySelector('#works-link').textContent = 'WORKS';
+                document.querySelector('#contact-link').textContent = 'CONTACT';
+                document.querySelector('#cv-link').textContent = 'My CV';
+            }
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Enrique Franco</h1>
+        <p>Diseñador y Gestor del Patrimonio Cultural</p>
+    </header>
+    <div class="language-switch">
+        <button onclick="changeLanguage('es')" class="lang-btn">ES</button> |
+        <button onclick="changeLanguage('en')" class="lang-btn">EN</button>
+    </div>
+    <main>
+        <nav>
+            <ul class="main-nav">
+                <li><a id="about-link" href="about.html">Sobre mí</a></li>
+                <li><a id="works-link" href="projects.html">Proyectos</a></li>
+                <li><a id="contact-link" href="contact.html">Contacto</a></li>
+                <li><a id="cv-link" href="ruta/a/tu-cv.pdf" target="_blank">Mi CV</a></li>
+            </ul>
+        </nav>
+    </main>
+</body>
+</html>
