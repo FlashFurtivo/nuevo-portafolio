@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyectos - Enrique Franco</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
     <script>
         function changeLanguage(lang) {
             const url = new URL(window.location);
@@ -17,6 +17,12 @@
             const params = new URLSearchParams(window.location.search);
             const lang = params.get('lang') || 'es';
             document.documentElement.lang = lang;
+            const links = document.querySelectorAll('nav a');
+            links.forEach(link => {
+                const url = new URL(link.href);
+                url.searchParams.set('lang', lang);
+                link.href = url.toString();
+            });
             if (lang === 'en') {
                 document.querySelector('h1').textContent = 'Projects';
                 document.querySelector('p').textContent = 'Content of the "Projects" page.';
